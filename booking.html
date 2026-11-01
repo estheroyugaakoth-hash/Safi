@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book home cleaning, plumbing or electrical services with Safi.">
+    <title>Book a Service | Safi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Safi.</a>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="booking.html" aria-current="page">Book Now</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-hero">
+            <p class="eyebrow">LET'S GET IT SORTED</p>
+            <h1>Book Your Home Service</h1>
+            <p>Tell us what you need, and we'll help you take the next step.</p>
+        </section>
+
+        <section class="booking-section">
+            <div class="booking-layout">
+                <div class="booking-info">
+                    <h2>A little help goes a long way.</h2>
+                    <p>
+                        Use the form to request a convenient date and time
+                        for your home service.
+                    </p>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+                        alt="Bright, comfortable and well-maintained living room"
+                        loading="lazy"
+                    >
+
+                    <h3>Before you book</h3>
+                    <ul>
+                        <li>Choose the service you need.</li>
+                        <li>Provide your contact details.</li>
+                        <li>Describe any special requirements.</li>
+                    </ul>
+                </div>
+
+                <form id="bookingForm" action="booking-submit.php" method="POST">
+                    <h2>Booking Details</h2>
+
+                    <label for="fullName">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        autocomplete="name"
+                        placeholder="Enter your full name"
+                        required
+                        minlength="2"
+                    >
+
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        autocomplete="tel"
+                        placeholder="Enter your phone number"
+                        required
+                        pattern="[0-9+() -]{9,16}"
+                    >
+
+                    <label for="service">Choose a Service</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="cleaning">Home Cleaning</option>
+                        <option value="plumbing">Plumbing</option>
+                        <option value="electrical">Electrical Repairs</option>
+                    </select>
+
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Preferred Time</label>
+                    <select id="time" name="time" required>
+                        <option value="">Choose a time</option>
+                        <option value="morning">Morning (8 AM – 12 PM)</option>
+                        <option value="afternoon">Afternoon (12 PM – 4 PM)</option>
+                        <option value="evening">Evening (4 PM – 6 PM)</option>
+                    </select>
+
+                    <label for="address">Service Location</label>
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        autocomplete="street-address"
+                        placeholder="Estate, town or area"
+                        required
+                    >
+
+                    <label for="details">Additional Details</label>
+                    <textarea
+                        id="details"
+                        name="details"
+                        placeholder="Tell us more about the service you need"
+                        maxlength="500"
+                    ></textarea>
+
+                    <button type="submit">Submit Booking Request</button>
+
+                    <p id="bookingMessage" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Safi.</strong> — Your home. Our priority.</p>
+        <p>&copy; 2026 Safi Home Services.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

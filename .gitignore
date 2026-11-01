@@ -1,0 +1,12 @@
+# Database credentials
+config/database.php
+
+# Admin account creation and database testing
+create-admin.php
+test-connection.php
+
+# Local environment files
+.env
+
+# Temporary files
+*.log
